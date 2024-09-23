@@ -27,9 +27,17 @@
                 return false;
             }
         }
-        $num= 5;
-        $num=-5;
-        $num= 'hi';
+        
+        function do_math($a, $b){
+            $sum=0;
+            if(positive_number($a)){
+                $sum += $a;
+            {
+                $sum += $b;
+            }
+            return $sum;
+        }}    
+    
         if(positive_number($num)){
             echo "Its positive";
         }
@@ -46,7 +54,14 @@
     <main>
         <?php 
         $my_name= "Jayjay";
-        welcome_by_name($my_name); ?>
+        welcome_by_name($my_name); 
+
+        $x= 10;
+        $y= 2;
+        $total= do_math($x,$y);
+        echo "The total is $total";
+
+        ?>
     </main>
 </body>
 </html>
