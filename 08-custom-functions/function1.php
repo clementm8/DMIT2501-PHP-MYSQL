@@ -18,6 +18,24 @@
             $name= strtoupper($name);
             echo "<p> Welcome $name </p>;";
         }
+
+        function positive_number($num){
+            if (is_numeric($num)&& $num){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        $num= 5;
+        $num=-5;
+        $num= 'hi';
+        if(positive_number($num)){
+            echo "Its positive";
+        }
+        else{
+            echo "Its negative";
+        }
     ?>
 
     <header>
