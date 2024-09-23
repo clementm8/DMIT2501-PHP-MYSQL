@@ -15,6 +15,7 @@
         }
 
         function welcome_by_name($name){
+            $name= strtoupper($name);
             echo "<p> Welcome $name </p>;";
         }
     ?>
