@@ -16,13 +16,25 @@
         $word = str_replace(" ", "_", $word);
         $word = substr($word, 0, 20);
         $word = $word . time() . ".html";
+        return $word;
+    }
+
+    if(isset($GET['word'])){
+        $word= $_GET['word'];
     }
     ?>
+    
 
     <form action="<? $_SERVER['REQUEST_URI'] ?>"></form>
     <label for="word">Enter the word for a filename</label>
     <input type="text" id="word" name="word" value="<?= $word; ?>">
     </form>
+    <?php
+    if($word){
+        echo create_safe_filename($word);
+    }
+    
+    ?>
 </body>
 
 </html>
